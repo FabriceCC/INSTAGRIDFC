@@ -21,6 +21,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdt-0f-w2T">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-sQ-Eqk" userLabel="Square Stack View">
+                                        <rect key="frame" x="47.5" y="179" width="280" height="280"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YZP-Li-i9d" userLabel="TopStack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="135"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-WR-D50" userLabel="BottomStack View">
+                                                <rect key="frame" x="0.0" y="145" width="280" height="135"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="8k8-gG-O4t"/>
+                                            <constraint firstAttribute="height" constant="280" id="ICs-0w-6g9"/>
+                                        </constraints>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E16-G0-yki" userLabel="Button Up">
                                         <rect key="frame" x="48" y="519" width="80" height="80"/>
                                         <constraints>
@@ -57,6 +75,8 @@
                                     <constraint firstItem="E16-G0-yki" firstAttribute="baseline" secondItem="yw5-1n-vBu" secondAttribute="baseline" id="I8J-wd-Zu6"/>
                                     <constraint firstItem="RJr-EK-sKw" firstAttribute="leading" secondItem="E16-G0-yki" secondAttribute="trailing" constant="19" id="JFq-51-Opz"/>
                                     <constraint firstItem="E16-G0-yki" firstAttribute="baseline" secondItem="MSU-Kn-7ou" secondAttribute="baseline" id="RFv-Xb-BQa"/>
+                                    <constraint firstItem="FFl-sQ-Eqk" firstAttribute="centerX" secondItem="jdt-0f-w2T" secondAttribute="centerX" id="SAL-HR-69h"/>
+                                    <constraint firstItem="E16-G0-yki" firstAttribute="top" secondItem="FFl-sQ-Eqk" secondAttribute="bottom" constant="60" id="U1X-Ht-OIK"/>
                                     <constraint firstItem="E16-G0-yki" firstAttribute="firstBaseline" secondItem="MSU-Kn-7ou" secondAttribute="firstBaseline" id="aSc-E1-Doi"/>
                                     <constraint firstItem="MSU-Kn-7ou" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RJr-EK-sKw" secondAttribute="trailing" constant="8" symbolic="YES" id="cJv-Wb-xOH"/>
                                     <constraint firstItem="yw5-1n-vBu" firstAttribute="centerX" secondItem="jdt-0f-w2T" secondAttribute="centerX" id="ekD-EO-xYw"/>
@@ -90,5 +110,4 @@
         <image name="Bouton Up" width="40" height="40"/>
         <image name="Selected " width="40" height="40"/>
     </resources>
-    <color key="tintColor" red="0.71161156892776489" green="0.84122258424758911" blue="0.90042299032211304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
