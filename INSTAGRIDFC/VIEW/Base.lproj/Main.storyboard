@@ -21,8 +21,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdt-0f-w2T">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E16-G0-yki" userLabel="Button Up">
-                                        <rect key="frame" x="47.5" y="519" width="80" height="80"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E16-G0-yki" userLabel="Button Up">
+                                        <rect key="frame" x="48" y="519" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="D83-Ld-Ckj"/>
                                             <constraint firstAttribute="height" constant="80" id="cCG-Ti-AcU"/>
@@ -45,9 +45,8 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Bouton 4"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-EK-sKw">
-                                        <rect key="frame" x="147" y="519" width="81" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJr-EK-sKw" userLabel="Button Selected">
+                                        <rect key="frame" x="147" y="519" width="80" height="80"/>
                                         <state key="normal" title="Button" backgroundImage="Selected "/>
                                     </button>
                                 </subviews>
@@ -55,9 +54,18 @@
                                 <constraints>
                                     <constraint firstItem="MSU-Kn-7ou" firstAttribute="leading" secondItem="yw5-1n-vBu" secondAttribute="trailing" constant="20" id="3RZ-2Q-TuR"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="E16-G0-yki" secondAttribute="bottom" constant="40" id="7GB-mO-yZz"/>
+                                    <constraint firstItem="E16-G0-yki" firstAttribute="baseline" secondItem="yw5-1n-vBu" secondAttribute="baseline" id="I8J-wd-Zu6"/>
+                                    <constraint firstItem="RJr-EK-sKw" firstAttribute="leading" secondItem="E16-G0-yki" secondAttribute="trailing" constant="19" id="JFq-51-Opz"/>
+                                    <constraint firstItem="E16-G0-yki" firstAttribute="baseline" secondItem="MSU-Kn-7ou" secondAttribute="baseline" id="RFv-Xb-BQa"/>
+                                    <constraint firstItem="E16-G0-yki" firstAttribute="firstBaseline" secondItem="MSU-Kn-7ou" secondAttribute="firstBaseline" id="aSc-E1-Doi"/>
+                                    <constraint firstItem="MSU-Kn-7ou" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RJr-EK-sKw" secondAttribute="trailing" constant="8" symbolic="YES" id="cJv-Wb-xOH"/>
                                     <constraint firstItem="yw5-1n-vBu" firstAttribute="centerX" secondItem="jdt-0f-w2T" secondAttribute="centerX" id="ekD-EO-xYw"/>
+                                    <constraint firstItem="E16-G0-yki" firstAttribute="bottom" secondItem="RJr-EK-sKw" secondAttribute="bottom" id="h9t-G2-dNd"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="yw5-1n-vBu" secondAttribute="bottom" constant="40" id="hO7-kF-a0A"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="MSU-Kn-7ou" secondAttribute="bottom" constant="40" id="lPG-bf-1kp"/>
+                                    <constraint firstItem="E16-G0-yki" firstAttribute="firstBaseline" secondItem="yw5-1n-vBu" secondAttribute="firstBaseline" id="m5v-To-EPO"/>
+                                    <constraint firstItem="E16-G0-yki" firstAttribute="top" secondItem="RJr-EK-sKw" secondAttribute="top" id="s9D-72-LC2"/>
+                                    <constraint firstItem="E16-G0-yki" firstAttribute="leading" secondItem="jdt-0f-w2T" secondAttribute="leading" constant="48" id="sB0-h2-ETA"/>
                                 </constraints>
                             </view>
                         </subviews>
