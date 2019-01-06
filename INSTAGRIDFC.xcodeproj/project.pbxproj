@@ -12,6 +12,8 @@
 		2D2BBC4E21E1EE79005933A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2BBC4C21E1EE79005933A0 /* Main.storyboard */; };
 		2D2BBC5021E1EE7A005933A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D2BBC4F21E1EE7A005933A0 /* Assets.xcassets */; };
 		2D2BBC5321E1EE7A005933A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2BBC5121E1EE7A005933A0 /* LaunchScreen.storyboard */; };
+		2D2BBC5E21E1EFF7005933A0 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D2BBC5D21E1EFF7005933A0 /* ThirstySoftRegular.otf */; };
+		2D2BBC6021E1F001005933A0 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D2BBC5F21E1F001005933A0 /* Delm-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2D2BBC4F21E1EE7A005933A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D2BBC5221E1EE7A005933A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D2BBC5421E1EE7A005933A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D2BBC5D21E1EFF7005933A0 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		2D2BBC5F21E1F001005933A0 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		2D2BBC4721E1EE79005933A0 /* INSTAGRIDFC */ = {
 			isa = PBXGroup;
 			children = (
-				2D2BBC4821E1EE79005933A0 /* AppDelegate.swift */,
-				2D2BBC4A21E1EE79005933A0 /* ViewController.swift */,
-				2D2BBC4C21E1EE79005933A0 /* Main.storyboard */,
+				2D2BBC5C21E1EE9E005933A0 /* MODEL */,
+				2D2BBC5B21E1EE95005933A0 /* VIEW */,
+				2D2BBC5A21E1EE88005933A0 /* CONTROLLER */,
 				2D2BBC4F21E1EE7A005933A0 /* Assets.xcassets */,
-				2D2BBC5121E1EE7A005933A0 /* LaunchScreen.storyboard */,
+				2D2BBC5D21E1EFF7005933A0 /* ThirstySoftRegular.otf */,
+				2D2BBC5F21E1F001005933A0 /* Delm-Medium.otf */,
 				2D2BBC5421E1EE7A005933A0 /* Info.plist */,
 			);
 			path = INSTAGRIDFC;
+			sourceTree = "<group>";
+		};
+		2D2BBC5A21E1EE88005933A0 /* CONTROLLER */ = {
+			isa = PBXGroup;
+			children = (
+				2D2BBC4A21E1EE79005933A0 /* ViewController.swift */,
+			);
+			path = CONTROLLER;
+			sourceTree = "<group>";
+		};
+		2D2BBC5B21E1EE95005933A0 /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				2D2BBC5121E1EE7A005933A0 /* LaunchScreen.storyboard */,
+				2D2BBC4C21E1EE79005933A0 /* Main.storyboard */,
+			);
+			path = VIEW;
+			sourceTree = "<group>";
+		};
+		2D2BBC5C21E1EE9E005933A0 /* MODEL */ = {
+			isa = PBXGroup;
+			children = (
+				2D2BBC4821E1EE79005933A0 /* AppDelegate.swift */,
+			);
+			path = MODEL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D2BBC5321E1EE7A005933A0 /* LaunchScreen.storyboard in Resources */,
+				2D2BBC6021E1F001005933A0 /* Delm-Medium.otf in Resources */,
 				2D2BBC5021E1EE7A005933A0 /* Assets.xcassets in Resources */,
+				2D2BBC5E21E1EFF7005933A0 /* ThirstySoftRegular.otf in Resources */,
 				2D2BBC4E21E1EE79005933A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
