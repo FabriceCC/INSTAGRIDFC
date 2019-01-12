@@ -34,7 +34,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twm-2r-dd3">
-                                <rect key="frame" x="20" y="182" width="335" height="335"/>
+                                <rect key="frame" x="20" y="171" width="335" height="335"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-sQ-Eqk" userLabel="Square Stack View">
                                         <rect key="frame" x="10" y="10" width="315" height="315"/>
@@ -98,10 +98,10 @@
                                 </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="otd-Lq-uBP">
-                                <rect key="frame" x="20" y="557" width="335" height="80"/>
+                                <rect key="frame" x="20" y="546" width="335" height="91"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSU-Kn-7ou" userLabel="Button Four">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="5.5" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="hNu-O7-2mc"/>
                                             <constraint firstAttribute="width" secondItem="MSU-Kn-7ou" secondAttribute="height" multiplier="1:1" id="tKw-fc-PdX"/>
@@ -109,7 +109,7 @@
                                         <state key="normal" backgroundImage="Bouton 4"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E16-G0-yki" userLabel="Button Up">
-                                        <rect key="frame" x="127.5" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="127.5" y="5.5" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="E16-G0-yki" secondAttribute="height" multiplier="1:1" id="81G-LC-WIn"/>
                                             <constraint firstAttribute="width" constant="80" id="ANI-JO-SkZ"/>
@@ -117,7 +117,7 @@
                                         <state key="normal" backgroundImage="Bouton Up"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw5-1n-vBu" userLabel="Button Bottom">
-                                        <rect key="frame" x="255" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="255" y="5.5" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="2ua-Xh-Kdz"/>
                                             <constraint firstAttribute="width" secondItem="yw5-1n-vBu" secondAttribute="height" multiplier="1:1" id="7p1-ut-pTL"/>
@@ -127,8 +127,8 @@
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical"/>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="^   Swipe up to share" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6MI-At-SWJ">
-                                <rect key="frame" x="114.5" y="135" width="146" height="32"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Swipe up to share" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6MI-At-SWJ">
+                                <rect key="frame" x="123.5" y="128" width="128" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6MI-At-SWJ" secondAttribute="height" multiplier="50:11" id="DFO-Rw-ht0"/>
                                 </constraints>
@@ -136,14 +136,31 @@
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="^" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="bZy-RK-ae1">
+                                <rect key="frame" x="178" y="78" width="19" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bZy-RK-ae1" secondAttribute="height" multiplier="103:55" id="WUO-XE-NFq"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="WUO-XE-NFq"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.71161156889999999" green="0.84122258419999996" blue="0.90042299029999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="otd-Lq-uBP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Qa-Cc-tfT"/>
                             <constraint firstItem="twm-2r-dd3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="95K-NP-ApM"/>
+                            <constraint firstItem="bZy-RK-ae1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AbQ-HR-EbA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="twm-2r-dd3" secondAttribute="bottom" constant="100" id="EfK-Gw-8Z8"/>
                             <constraint firstItem="otd-Lq-uBP" firstAttribute="top" secondItem="twm-2r-dd3" secondAttribute="bottom" constant="40" id="EmK-YB-99O"/>
                             <constraint firstItem="h8O-Lo-Bx9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FhK-0m-OhG"/>
+                            <constraint firstItem="6MI-At-SWJ" firstAttribute="top" secondItem="bZy-RK-ae1" secondAttribute="bottom" constant="5" id="KGg-h7-5IF"/>
+                            <constraint firstItem="bZy-RK-ae1" firstAttribute="top" secondItem="h8O-Lo-Bx9" secondAttribute="bottom" constant="5" id="N28-Tk-2Fw"/>
                             <constraint firstItem="twm-2r-dd3" firstAttribute="top" secondItem="h8O-Lo-Bx9" secondAttribute="bottom" constant="60" id="SoA-JC-aTA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="twm-2r-dd3" secondAttribute="trailing" constant="20" id="TTI-Ii-hPf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="otd-Lq-uBP" secondAttribute="bottom" constant="30" id="Wcy-fg-Ggy"/>
@@ -207,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39.375" y="25.35211267605634"/>
+            <point key="canvasLocation" x="39.200000000000003" y="24.7376311844078"/>
         </scene>
     </scenes>
     <resources>

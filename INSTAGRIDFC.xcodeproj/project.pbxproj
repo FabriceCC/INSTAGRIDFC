@@ -14,6 +14,9 @@
 		2D2BBC5321E1EE7A005933A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2BBC5121E1EE7A005933A0 /* LaunchScreen.storyboard */; };
 		2D2BBC5E21E1EFF7005933A0 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D2BBC5D21E1EFF7005933A0 /* ThirstySoftRegular.otf */; };
 		2D2BBC6021E1F001005933A0 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D2BBC5F21E1F001005933A0 /* Delm-Medium.otf */; };
+		2D664B7B21E9DC6200555104 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D664B7A21E9DC6200555104 /* Font Awesome 5 Brands-Regular-400.otf */; };
+		2D664B7D21E9DC6800555104 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D664B7C21E9DC6800555104 /* Font Awesome 5 Free-Regular-400.otf */; };
+		2D664B7F21E9DC7200555104 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D664B7E21E9DC7200555104 /* Font Awesome 5 Free-Solid-900.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		2D2BBC5421E1EE7A005933A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D2BBC5D21E1EFF7005933A0 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		2D2BBC5F21E1F001005933A0 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		2D664B7A21E9DC6200555104 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Font Awesome 5 Brands-Regular-400.otf"; path = "../../../Downloads/fontawesome-free-5.6.3-desktop/otfs/Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		2D664B7C21E9DC6800555104 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Font Awesome 5 Free-Regular-400.otf"; path = "../../../Downloads/fontawesome-free-5.6.3-desktop/otfs/Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		2D664B7E21E9DC7200555104 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Font Awesome 5 Free-Solid-900.otf"; path = "../../../Downloads/fontawesome-free-5.6.3-desktop/otfs/Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				2D2BBC4F21E1EE7A005933A0 /* Assets.xcassets */,
 				2D2BBC5D21E1EFF7005933A0 /* ThirstySoftRegular.otf */,
 				2D2BBC5F21E1F001005933A0 /* Delm-Medium.otf */,
+				2D664B7A21E9DC6200555104 /* Font Awesome 5 Brands-Regular-400.otf */,
+				2D664B7C21E9DC6800555104 /* Font Awesome 5 Free-Regular-400.otf */,
+				2D664B7E21E9DC7200555104 /* Font Awesome 5 Free-Solid-900.otf */,
 				2D2BBC5421E1EE7A005933A0 /* Info.plist */,
 			);
 			path = INSTAGRIDFC;
@@ -153,10 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D2BBC5321E1EE7A005933A0 /* LaunchScreen.storyboard in Resources */,
+				2D664B7B21E9DC6200555104 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
+				2D664B7D21E9DC6800555104 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				2D2BBC6021E1F001005933A0 /* Delm-Medium.otf in Resources */,
 				2D2BBC5021E1EE7A005933A0 /* Assets.xcassets in Resources */,
 				2D2BBC5E21E1EFF7005933A0 /* ThirstySoftRegular.otf in Resources */,
 				2D2BBC4E21E1EE79005933A0 /* Main.storyboard in Resources */,
+				2D664B7F21E9DC7200555104 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

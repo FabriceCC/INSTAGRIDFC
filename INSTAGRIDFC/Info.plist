@@ -44,7 +44,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>ThirstySoftRegular.otf</string>
+		<string>Font Awesome 5 Brands -Regular-400.otf</string>
 		<string>Delm-Medium.otf</string>
+		<string>Font Awesone 5 Free-Regular-400.otf</string>
+		<string>Font Awesone 5 Free-Solid-900.otf</string>
 	</array>
 </dict>
 </plist>
