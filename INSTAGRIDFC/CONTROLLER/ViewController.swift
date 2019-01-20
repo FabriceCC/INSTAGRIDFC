@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         dismiss(animated:true, completion: nil)
     }
     
-    func Action() {
+    func Action(Buton: UIButton) {
         let caméra = UIImagePickerController.isSourceTypeAvailable(.camera)
         let phototèque = UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
         
@@ -83,25 +83,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var TopButtonLeft: UIButton!
     @IBAction func TopButtonLeft(_ sender: UIButton) {
         Bouton = TopButtonLeft
-        Action()
+        Action(Buton : Bouton)
     }
     
     @IBOutlet weak var TopButtonRight: UIButton!
     @IBAction func TopButtonRight(_ sender: UIButton) {
         Bouton = TopButtonRight
-        Action()
+        Action(Buton : Bouton)
     }
     
     @IBOutlet weak var BottomButtonLeft: UIButton!
     @IBAction func BottomButtonLeft(_ sender: UIButton) {
         Bouton = BottomButtonLeft
-        Action()
+        Action(Buton : Bouton)
     }
     
     @IBOutlet weak var BottomButtonRight: UIButton!
     @IBAction func BottomButtonRight(_ sender: UIButton) {
         Bouton = BottomButtonRight
-        Action()
+        Action(Buton : Bouton)
     }
     
     @IBAction func Four(_ sender: UIButton) {
