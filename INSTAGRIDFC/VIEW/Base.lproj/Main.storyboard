@@ -39,11 +39,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" backgroundImage="Shape"/>
+                                                        <connections>
+                                                            <action selector="TopButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynf-ls-tqP"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaT-xy-MoK" userLabel="TopButtonRight">
                                                         <rect key="frame" x="135" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" backgroundImage="Shape"/>
+                                                        <connections>
+                                                            <action selector="TopButtonRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7U-dy-Tnq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,11 +61,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" backgroundImage="Shape"/>
+                                                        <connections>
+                                                            <action selector="BottomButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="all-8r-oWJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-Jk-HNy" userLabel="BottomButtonRight">
                                                         <rect key="frame" x="135" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" backgroundImage="Shape"/>
+                                                        <connections>
+                                                            <action selector="BottomButtonRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzJ-t0-OfG"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,6 +112,9 @@
                                             <constraint firstAttribute="width" secondItem="MSU-Kn-7ou" secondAttribute="height" multiplier="1:1" id="tKw-fc-PdX"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="Bouton 4"/>
+                                        <connections>
+                                            <action selector="Four:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sRL-VP-Xzk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E16-G0-yki" userLabel="Button Up">
                                         <rect key="frame" x="100" y="0.0" width="80" height="80"/>
@@ -108,6 +123,9 @@
                                             <constraint firstAttribute="width" constant="80" id="ANI-JO-SkZ"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="Bouton Up"/>
+                                        <connections>
+                                            <action selector="OneTop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ty-hm-CZ7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw5-1n-vBu" userLabel="Button Bottom">
                                         <rect key="frame" x="200" y="0.0" width="80" height="80"/>
@@ -116,6 +134,9 @@
                                             <constraint firstAttribute="width" secondItem="yw5-1n-vBu" secondAttribute="height" multiplier="1:1" id="7p1-ut-pTL"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="Bouton Buttom"/>
+                                        <connections>
+                                            <action selector="OneBottom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UjG-GM-pHK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical"/>
@@ -383,6 +404,15 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="BottomButtonLeft" destination="q3a-t7-r5m" id="cFb-8r-OEh"/>
+                        <outlet property="BottomButtonRight" destination="nyS-Jk-HNy" id="2vb-kD-N5y"/>
+                        <outlet property="BottomStackView" destination="k4O-WR-D50" id="LQy-dT-ZMX"/>
+                        <outlet property="SquareStackView" destination="FFl-sQ-Eqk" id="gb4-2O-158"/>
+                        <outlet property="TopButtonLeft" destination="mvT-LZ-ZRi" id="V01-n3-ssw"/>
+                        <outlet property="TopButtonRight" destination="qaT-xy-MoK" id="AVX-Yr-3hY"/>
+                        <outlet property="TopStackView" destination="YZP-Li-i9d" id="HLc-Gf-Ee1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
