@@ -15,7 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    
+    
     @IBOutlet weak var SquareStackView: UIStackView!
     @IBOutlet weak var TopStackView: UIStackView!
     @IBOutlet weak var BottomStackView: UIStackView!
@@ -68,6 +69,9 @@ class ViewController: UIViewController {
         TopButtonRight.isHidden = false
         BottomButtonLeft.isHidden = false
         BottomButtonRight.isHidden = false
+      
+        //Four.setBackgroundImage(Selected, for: .normal)
+    
     }
     
     override func didReceiveMemoryWarning() {
