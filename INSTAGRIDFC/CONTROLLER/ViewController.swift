@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    var Bouton: UIButton!
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var photo = UIImage ()
         
@@ -25,7 +27,7 @@ class ViewController: UIViewController {
             photo = image
         }
         
-       TopButtonLeft.setBackgroundImage(photo, for: .normal)
+       Bouton.setBackgroundImage(photo, for: .normal)
         //MyImage.isHidden = false
         //Bouton.isHidden = true
         dismiss(animated:true, completion: nil)
@@ -47,14 +49,14 @@ class ViewController: UIViewController {
             present(Choice, animated: true)
         case (true, false) :
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
             imagePicker.sourceType = .camera;
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
             
         case (false, true) :
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
             imagePicker.sourceType = .photoLibrary;
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
@@ -69,7 +71,7 @@ class ViewController: UIViewController {
     func Selection(pour typeSource: UIImagePickerController.SourceType) {
         let selecteur = UIImagePickerController()
         selecteur.sourceType = typeSource
-        selecteur.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate) // as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        selecteur.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate // as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         present(selecteur, animated: true)
         
         
@@ -80,21 +82,25 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var TopButtonLeft: UIButton!
     @IBAction func TopButtonLeft(_ sender: UIButton) {
+        Bouton = TopButtonLeft
         Action()
     }
     
     @IBOutlet weak var TopButtonRight: UIButton!
     @IBAction func TopButtonRight(_ sender: UIButton) {
+        Bouton = TopButtonRight
         Action()
     }
     
     @IBOutlet weak var BottomButtonLeft: UIButton!
     @IBAction func BottomButtonLeft(_ sender: UIButton) {
+        Bouton = BottomButtonLeft
         Action()
     }
     
     @IBOutlet weak var BottomButtonRight: UIButton!
     @IBAction func BottomButtonRight(_ sender: UIButton) {
+        Bouton = BottomButtonRight
         Action()
     }
     
