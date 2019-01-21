@@ -79,10 +79,16 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="oQD-0T-6Ff" appends="YES" id="Ue6-q2-x2b"/>
+                                            <outletCollection property="gestureRecognizers" destination="QF2-cW-lHS" appends="YES" id="GBp-lw-Orm"/>
+                                        </connections>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="twm-2r-dd3" secondAttribute="height" multiplier="1:1" id="3JX-kA-MCI"/>
                                     <constraint firstAttribute="bottom" secondItem="FFl-sQ-Eqk" secondAttribute="bottom" constant="10" id="4si-Ac-1Go"/>
@@ -101,6 +107,9 @@
                                         <include reference="bj2-eU-wV3"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oQD-0T-6Ff" appends="YES" id="c1S-Nh-Kz6"/>
+                                </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="otd-Lq-uBP">
                                 <rect key="frame" x="20" y="458" width="280" height="80"/>
@@ -404,6 +413,10 @@
                                 <include reference="EmK-YB-99O"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QF2-cW-lHS" appends="YES" id="MrG-dA-Wgn"/>
+                            <outletCollection property="gestureRecognizers" destination="QF2-cW-lHS" appends="YES" id="gr9-1c-ne6"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="BottomButtonLeft" destination="q3a-t7-r5m" id="cFb-8r-OEh"/>
@@ -416,9 +429,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="hCq-iQ-Dsg">
+                <swipeGestureRecognizer direction="left" id="oQD-0T-6Ff">
                     <connections>
-                        <action selector="Swipe:" destination="BYZ-38-t0r" id="veq-It-LMw"/>
+                        <action selector="LeftSwipe:" destination="BYZ-38-t0r" id="yTr-xW-htU"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="QF2-cW-lHS">
+                    <connections>
+                        <action selector="UpSwipe:" destination="BYZ-38-t0r" id="0tF-20-iQf"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

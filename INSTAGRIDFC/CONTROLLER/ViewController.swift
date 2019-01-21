@@ -145,24 +145,14 @@ class ViewController: UIViewController {
     
     }
     
-    
-    @IBAction func Swipe(_ sender: UISwipeGestureRecognizer) {
-         switch sender.direction {
-            case .right:
-                print("Swiped right")
-            case .down:
-                print("Swiped down")
-            case .left:
-                print("Swiped left")
-            case .up:
-                print("Swiped up")
-            default:
-                break
-            }
+    @IBAction func UpSwipe(_ sender: UISwipeGestureRecognizer) {
+    print ("Up")
     }
-        
     
-    
+     
+    @IBAction func LeftSwipe(_ sender: UISwipeGestureRecognizer) {
+    print ("Left")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
