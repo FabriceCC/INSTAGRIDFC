@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,6 @@ class ViewController: UIViewController {
         }
         
        Bouton.setBackgroundImage(photo, for: .normal)
-        //MyImage.isHidden = false
-        //Bouton.isHidden = true
         dismiss(animated:true, completion: nil)
     }
     
@@ -49,14 +48,14 @@ class ViewController: UIViewController {
             present(Choice, animated: true)
         case (true, false) :
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.delegate = self //as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
             imagePicker.sourceType = .camera;
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
             
         case (false, true) :
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.delegate = self //as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
             imagePicker.sourceType = .photoLibrary;
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
@@ -71,7 +70,7 @@ class ViewController: UIViewController {
     func Selection(pour typeSource: UIImagePickerController.SourceType) {
         let selecteur = UIImagePickerController()
         selecteur.sourceType = typeSource
-        selecteur.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate // as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        selecteur.delegate = self //as? UIImagePickerControllerDelegate & UINavigationControllerDelegate // as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         present(selecteur, animated: true)
         
         
@@ -146,10 +145,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func UpSwipe(_ sender: UISwipeGestureRecognizer) {
-    print ("Up")
+        switch sender.direction {
+        case [.left]:   TopButtonLeft.isHidden = true
+        case [.right]:  TopButtonRight.isHidden = true
+        case [.up]:     BottomButtonLeft.isHidden = true
+        case [.down]:   BottomButtonRight.isHidden = true
+        default:        break
+        }
     }
     
-     
     @IBAction func LeftSwipe(_ sender: UISwipeGestureRecognizer) {
     print ("Left")
     }
