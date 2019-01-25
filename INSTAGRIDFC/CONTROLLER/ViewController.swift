@@ -114,16 +114,11 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     @IBAction func UpSwipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case [.left]:   print("1")
-        case [.right]:  print("2")
         case [.up]:     print("3")
-        case [.down]:   print("4")
         default:        break
         }
     }
-    
-    @IBAction func LeftSwipe(_ sender: UISwipeGestureRecognizer) {
-    print ("Left")
-    }
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

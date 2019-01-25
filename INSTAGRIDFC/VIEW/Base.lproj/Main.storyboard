@@ -429,12 +429,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="oQD-0T-6Ff">
+                <swipeGestureRecognizer direction="left" id="oQD-0T-6Ff" userLabel="LeftSwipe">
                     <connections>
-                        <action selector="LeftSwipe:" destination="BYZ-38-t0r" id="yTr-xW-htU"/>
+                        <action selector="UpSwipe:" destination="BYZ-38-t0r" id="WTx-pP-CZ0"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="up" id="QF2-cW-lHS">
+                <swipeGestureRecognizer direction="up" id="QF2-cW-lHS" userLabel="UpSwipe">
                     <connections>
                         <action selector="UpSwipe:" destination="BYZ-38-t0r" id="0tF-20-iQf"/>
                     </connections>
