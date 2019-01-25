@@ -18,7 +18,10 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     var Bouton: UIButton!
     //var selection: UIImageAsset! = [Selected]
-   
+   let screenWidth = UIScreen.main.bounds.width
+   let screenHeight = UIScreen.main.bounds.height
+    //var translationTransform: CGAffineTransform
+    @IBOutlet weak var PrincipalView: UIView!
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var photo = UIImage ()
@@ -115,8 +118,20 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     @IBAction func Swipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
-        case [.left]:   print("1")
-        case [.up]:     print("3")
+        case [.left]:
+            
+            UIView.animate(withDuration: 0.3, animations: {
+               self.PrincipalView.transform = CGAffineTransform(translationX: -self.screenWidth, y: 0)
+          }, completion: nil)
+            
+            
+            
+            print("1")
+        case [.up]:
+            UIView.animate(withDuration: 0.3, animations: {
+                self.PrincipalView.transform = CGAffineTransform(translationX: 0, y: -self.screenHeight)
+            }, completion: nil)
+            print("3")
         default:        break
         }
     }

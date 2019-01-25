@@ -18,15 +18,15 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--VIewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="INSTAGRIDFC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="VIewController" customClass="ViewController" customModule="INSTAGRIDFC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twm-2r-dd3">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twm-2r-dd3" userLabel="PrincipalView">
                                 <rect key="frame" x="20" y="158" width="280" height="280"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-sQ-Eqk" userLabel="Square Stack View">
@@ -422,6 +422,7 @@
                         <outlet property="BottomButtonLeft" destination="q3a-t7-r5m" id="cFb-8r-OEh"/>
                         <outlet property="BottomButtonRight" destination="nyS-Jk-HNy" id="2vb-kD-N5y"/>
                         <outlet property="BottomStackView" destination="k4O-WR-D50" id="LQy-dT-ZMX"/>
+                        <outlet property="PrincipalView" destination="twm-2r-dd3" id="fhP-3W-NBg"/>
                         <outlet property="SquareStackView" destination="FFl-sQ-Eqk" id="gb4-2O-158"/>
                         <outlet property="TopButtonLeft" destination="mvT-LZ-ZRi" id="V01-n3-ssw"/>
                         <outlet property="TopButtonRight" destination="qaT-xy-MoK" id="AVX-Yr-3hY"/>
