@@ -2,14 +2,14 @@
 //  ViewController.swift
 //  INSTAGRIDFC
 //
-//  Created by utilisateur on 06/01/2019.
+//  Created by Fabrice Conchou on 06/01/2019.
 //  Copyright © 2019 Fabrice. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +48,14 @@ UINavigationControllerDelegate {
             present(Choice, animated: true)
         case (true, false) :
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self //as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.delegate = self
             imagePicker.sourceType = .camera;
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
             
         case (false, true) :
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self //as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary;
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
@@ -70,7 +70,7 @@ UINavigationControllerDelegate {
     func Selection(pour typeSource: UIImagePickerController.SourceType) {
         let selecteur = UIImagePickerController()
         selecteur.sourceType = typeSource
-        selecteur.delegate = self //as? UIImagePickerControllerDelegate & UINavigationControllerDelegate // as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        selecteur.delegate = self
         present(selecteur, animated: true)
         
         
@@ -78,78 +78,45 @@ UINavigationControllerDelegate {
     @IBOutlet weak var SquareStackView: UIStackView!
     @IBOutlet weak var TopStackView: UIStackView!
     @IBOutlet weak var BottomStackView: UIStackView!
-    
     @IBOutlet weak var TopButtonLeft: UIButton!
-    @IBAction func TopButtonLeft(_ sender: UIButton) {
-        Bouton = TopButtonLeft
+    
+    @IBAction func ActionButton(_ sender: UIButton) {
+        Bouton = sender
         Action(Buton : Bouton)
-        TopButtonLeft = Bouton
+        
     }
     
     @IBOutlet weak var TopButtonRight: UIButton!
-    @IBAction func TopButtonRight(_ sender: UIButton) {
-        Bouton = TopButtonRight
-        Action(Buton : Bouton)
-        TopButtonRight = Bouton
-    }
-    
     @IBOutlet weak var BottomButtonLeft: UIButton!
-    @IBAction func BottomButtonLeft(_ sender: UIButton) {
-        Bouton = BottomButtonLeft
-        Action(Buton : Bouton)
-        BottomButtonLeft = Bouton
-    }
-    
     @IBOutlet weak var BottomButtonRight: UIButton!
-    @IBAction func BottomButtonRight(_ sender: UIButton) {
-        Bouton = BottomButtonRight
-        Action(Buton : Bouton)
-        BottomButtonRight = Bouton
-    }
+   
     
-    @IBAction func Four(_ sender: UIButton) {
-        Four()
-    }
-    
-    @IBAction func OneTop(_ sender: UIButton) {
-        OneTop()
-    }
-    
-    
-    @IBAction func OneBottom(_ sender: UIButton) {
-        OneBottom()
-    }
-    
-    private func OneTop() {
-        TopButtonLeft.isHidden = true
-        TopButtonRight.isHidden = false
-        BottomButtonLeft.isHidden = false
-        BottomButtonRight.isHidden = false
-    }
-    
-    private func OneBottom() {
+    @IBAction func choose(_ sender: UIButton) {
+        switch (sender.tag) {
+        case 1:
         TopButtonLeft.isHidden = false
-        TopButtonRight.isHidden = false
-        BottomButtonLeft.isHidden = true
-        BottomButtonRight.isHidden = false
-    }
-    
-    private func Four() {
-        TopButtonLeft.isHidden = false
-        TopButtonRight.isHidden = false
         BottomButtonLeft.isHidden = false
-        BottomButtonRight.isHidden = false
-      
-        //Four.setBackgroundImage(Selected, for: .normal)
-    
+        
+        case 2:
+            TopButtonLeft.isHidden = true
+            BottomButtonLeft.isHidden = false
+         
+        case 3:
+            TopButtonLeft.isHidden = false
+            BottomButtonLeft.isHidden = true
+           
+        default: print ("Error")
+            
     }
+    }
+   
     
     @IBAction func UpSwipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
-        case [.left]:   TopButtonLeft.isHidden = true
-        case [.right]:  TopButtonRight.isHidden = true
-        case [.up]:     BottomButtonLeft.isHidden = true
-        case [.down]:   BottomButtonRight.isHidden = true
+        case [.left]:   print("1")
+        case [.right]:  print("2")
+        case [.up]:     print("3")
+        case [.down]:   print("4")
         default:        break
         }
     }

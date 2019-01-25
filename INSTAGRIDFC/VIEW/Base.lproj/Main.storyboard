@@ -40,7 +40,7 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" backgroundImage="Shape"/>
                                                         <connections>
-                                                            <action selector="TopButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynf-ls-tqP"/>
+                                                            <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YbP-vV-ZZS"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaT-xy-MoK" userLabel="TopButtonRight">
@@ -48,7 +48,7 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" backgroundImage="Shape"/>
                                                         <connections>
-                                                            <action selector="TopButtonRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7U-dy-Tnq"/>
+                                                            <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lYR-06-9Kx"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -62,7 +62,7 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" backgroundImage="Shape"/>
                                                         <connections>
-                                                            <action selector="BottomButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="all-8r-oWJ"/>
+                                                            <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jol-Di-DM1"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-Jk-HNy" userLabel="BottomButtonRight">
@@ -70,7 +70,7 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" backgroundImage="Shape"/>
                                                         <connections>
-                                                            <action selector="BottomButtonRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzJ-t0-OfG"/>
+                                                            <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSp-mh-LgF"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -114,7 +114,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="otd-Lq-uBP">
                                 <rect key="frame" x="20" y="458" width="280" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSU-Kn-7ou" userLabel="ButtonFour">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSU-Kn-7ou" userLabel="ButtonFour">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="hNu-O7-2mc"/>
@@ -122,10 +122,10 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Bouton 4"/>
                                         <connections>
-                                            <action selector="Four:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sRL-VP-Xzk"/>
+                                            <action selector="choose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uz-gx-iGH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E16-G0-yki" userLabel="ButtonUp">
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E16-G0-yki" userLabel="ButtonUp">
                                         <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="E16-G0-yki" secondAttribute="height" multiplier="1:1" id="81G-LC-WIn"/>
@@ -133,10 +133,10 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Bouton Up"/>
                                         <connections>
-                                            <action selector="OneTop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ty-hm-CZ7"/>
+                                            <action selector="choose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3f-cU-BQY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw5-1n-vBu" userLabel="ButtonBottom">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw5-1n-vBu" userLabel="ButtonBottom">
                                         <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="2ua-Xh-Kdz"/>
@@ -144,7 +144,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Bouton Buttom"/>
                                         <connections>
-                                            <action selector="OneBottom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UjG-GM-pHK"/>
+                                            <action selector="choose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i2P-f5-rst"/>
                                         </connections>
                                     </button>
                                 </subviews>
