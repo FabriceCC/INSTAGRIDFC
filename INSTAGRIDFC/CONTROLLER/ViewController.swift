@@ -17,7 +17,9 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     }
 
     var Bouton: UIButton!
-
+    //var selection: UIImageAsset! = [Selected]
+   
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var photo = UIImage ()
         
@@ -96,7 +98,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         case 1:
         TopButtonLeft.isHidden = false
         BottomButtonLeft.isHidden = false
-        
+        // sender.setBackgroundImage(Selected, for: .normal)
         case 2:
             TopButtonLeft.isHidden = true
             BottomButtonLeft.isHidden = false
@@ -111,7 +113,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     }
    
     
-    @IBAction func UpSwipe(_ sender: UISwipeGestureRecognizer) {
+    @IBAction func Swipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case [.left]:   print("1")
         case [.up]:     print("3")
@@ -124,6 +126,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+ // UIActivityViewController  UIActivityController
     
 }
 

@@ -431,12 +431,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="oQD-0T-6Ff" userLabel="LeftSwipe">
                     <connections>
-                        <action selector="UpSwipe:" destination="BYZ-38-t0r" id="WTx-pP-CZ0"/>
+                        <action selector="Swipe:" destination="BYZ-38-t0r" id="WTx-pP-CZ0"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="up" id="QF2-cW-lHS" userLabel="UpSwipe">
                     <connections>
-                        <action selector="UpSwipe:" destination="BYZ-38-t0r" id="0tF-20-iQf"/>
+                        <action selector="Swipe:" destination="BYZ-38-t0r" id="0tF-20-iQf"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
