@@ -11,17 +11,24 @@ import UIKit
 class ViewController: UIViewController,UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
+    
+    
+    @IBOutlet weak var PhotoView: PhotoView!
+    var ButtonSelect: UIButton!
+    //var selection: UIImageAsset! = [Selected]
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    //var translationTransform: CGAffineTransform
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    var Bouton: UIButton!
-    //var selection: UIImageAsset! = [Selected]
-   let screenWidth = UIScreen.main.bounds.width
-   let screenHeight = UIScreen.main.bounds.height
-    //var translationTransform: CGAffineTransform
-    @IBOutlet weak var PrincipalView: UIView!
+  
+  
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var photo = UIImage ()
@@ -33,7 +40,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             photo = image
         }
         
-       Bouton.setBackgroundImage(photo, for: .normal)
+       ButtonSelect.setImage(photo, for: .normal)
         dismiss(animated:true, completion: nil)
     }
     
@@ -44,8 +51,8 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         switch (caméra, phototèque) {
         case (true, true):
             let Choice = UIAlertController(title:nil, message: nil, preferredStyle: .actionSheet)
-            let actionCamera = UIAlertAction(title: "Caméra", style: .default, handler: { _ in self.Selection(pour: .camera)})
-            let actionPhototeque = UIAlertAction(title: "Phototèque", style: .default, handler: { _ in self.Selection(pour: .photoLibrary)})
+            let actionCamera = UIAlertAction(title: "Caméra", style: .default, handler: { _ in self.Selector(pour: .camera)})
+            let actionPhototeque = UIAlertAction(title: "Phototèque", style: .default, handler: { _ in self.Selector(pour: .photoLibrary)})
             let actionAnnuler = UIAlertAction(title: "Annuler", style: .cancel)
             Choice.addAction(actionCamera)
             Choice.addAction(actionPhototeque)
@@ -72,43 +79,36 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         
      
     }
-    func Selection(pour typeSource: UIImagePickerController.SourceType) {
-        let selecteur = UIImagePickerController()
-        selecteur.sourceType = typeSource
-        selecteur.delegate = self
-        present(selecteur, animated: true)
+    func Selector(pour typeSource: UIImagePickerController.SourceType) {
+        let selector = UIImagePickerController()
+        selector.sourceType = typeSource
+        selector.delegate = self
+        present(selector, animated: true)
         
         
     }
-    @IBOutlet weak var SquareStackView: UIStackView!
-    @IBOutlet weak var TopStackView: UIStackView!
-    @IBOutlet weak var BottomStackView: UIStackView!
-    @IBOutlet weak var TopButtonLeft: UIButton!
+    
     
     @IBAction func ActionButton(_ sender: UIButton) {
-        Bouton = sender
-        Action(Buton : Bouton)
+        ButtonSelect = sender
+        Action(Buton : ButtonSelect)
         
     }
     
-    @IBOutlet weak var TopButtonRight: UIButton!
-    @IBOutlet weak var BottomButtonLeft: UIButton!
-    @IBOutlet weak var BottomButtonRight: UIButton!
-   
+
     
     @IBAction func choose(_ sender: UIButton) {
         switch (sender.tag) {
         case 1:
-        TopButtonLeft.isHidden = false
-        BottomButtonLeft.isHidden = false
-        // sender.setBackgroundImage(Selected, for: .normal)
+         PhotoView.changeLayout(topLeftHidden: false, bottomLeftHidden: false)
+        
         case 2:
-            TopButtonLeft.isHidden = true
-            BottomButtonLeft.isHidden = false
+            PhotoView.changeLayout(topLeftHidden: true, bottomLeftHidden: false)
+            
          
         case 3:
-            TopButtonLeft.isHidden = false
-            BottomButtonLeft.isHidden = true
+            PhotoView.changeLayout(topLeftHidden: false, bottomLeftHidden: true)
+            
            
         default: print ("Error")
             
@@ -121,7 +121,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         case [.left]:
             
             UIView.animate(withDuration: 0.3, animations: {
-               self.PrincipalView.transform = CGAffineTransform(translationX: -self.screenWidth, y: 0)
+               self.PhotoView.transform = CGAffineTransform(translationX: -self.screenWidth, y: 0)
           }, completion: nil)
             
             
@@ -129,7 +129,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             print("1")
         case [.up]:
             UIView.animate(withDuration: 0.3, animations: {
-                self.PrincipalView.transform = CGAffineTransform(translationX: 0, y: -self.screenHeight)
+                self.PhotoView.transform = CGAffineTransform(translationX: 0, y: -self.screenHeight)
             }, completion: nil)
             print("3")
         default:        break

@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twm-2r-dd3" userLabel="PrincipalView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twm-2r-dd3" userLabel="PrincipalView" customClass="PhotoView" customModule="INSTAGRIDFC" customModuleProvider="target">
                                 <rect key="frame" x="20" y="158" width="280" height="280"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-sQ-Eqk" userLabel="Square Stack View">
@@ -35,18 +35,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YZP-Li-i9d" userLabel="TopStack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="125"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvT-LZ-ZRi" userLabel="TopButtonLeft">
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvT-LZ-ZRi" userLabel="TopButtonLeft">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" backgroundImage="Shape"/>
+                                                        <state key="normal" image="Shape croised"/>
                                                         <connections>
                                                             <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YbP-vV-ZZS"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaT-xy-MoK" userLabel="TopButtonRight">
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaT-xy-MoK" userLabel="TopButtonRight">
                                                         <rect key="frame" x="135" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" backgroundImage="Shape"/>
+                                                        <state key="normal" image="Shape croised"/>
                                                         <connections>
                                                             <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lYR-06-9Kx"/>
                                                         </connections>
@@ -57,18 +57,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-WR-D50" userLabel="BottomStack View">
                                                 <rect key="frame" x="0.0" y="135" width="260" height="125"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3a-t7-r5m" userLabel="BottomButtonLeft">
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3a-t7-r5m" userLabel="BottomButtonLeft">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" backgroundImage="Shape"/>
+                                                        <state key="normal" image="Shape croised"/>
                                                         <connections>
                                                             <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jol-Di-DM1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-Jk-HNy" userLabel="BottomButtonRight">
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-Jk-HNy" userLabel="BottomButtonRight">
                                                         <rect key="frame" x="135" y="0.0" width="125" height="125"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" backgroundImage="Shape"/>
+                                                        <state key="normal" image="Shape croised"/>
                                                         <connections>
                                                             <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSp-mh-LgF"/>
                                                         </connections>
@@ -82,7 +82,6 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="oQD-0T-6Ff" appends="YES" id="Ue6-q2-x2b"/>
-                                            <outletCollection property="gestureRecognizers" destination="QF2-cW-lHS" appends="YES" id="GBp-lw-Orm"/>
                                         </connections>
                                     </stackView>
                                 </subviews>
@@ -108,7 +107,10 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="oQD-0T-6Ff" appends="YES" id="c1S-Nh-Kz6"/>
+                                    <outlet property="BottomButtonLeft" destination="q3a-t7-r5m" id="vgF-Lv-Ga8"/>
+                                    <outlet property="BottomButtonRight" destination="nyS-Jk-HNy" id="MoC-pU-Edi"/>
+                                    <outlet property="TopButtonLeft" destination="mvT-LZ-ZRi" id="dAA-gP-DbG"/>
+                                    <outlet property="TopButtonRight" destination="qaT-xy-MoK" id="NRE-Gy-Bgt"/>
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="otd-Lq-uBP">
@@ -415,18 +417,10 @@
                         </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="QF2-cW-lHS" appends="YES" id="MrG-dA-Wgn"/>
-                            <outletCollection property="gestureRecognizers" destination="QF2-cW-lHS" appends="YES" id="gr9-1c-ne6"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="BottomButtonLeft" destination="q3a-t7-r5m" id="cFb-8r-OEh"/>
-                        <outlet property="BottomButtonRight" destination="nyS-Jk-HNy" id="2vb-kD-N5y"/>
-                        <outlet property="BottomStackView" destination="k4O-WR-D50" id="LQy-dT-ZMX"/>
-                        <outlet property="PrincipalView" destination="twm-2r-dd3" id="fhP-3W-NBg"/>
-                        <outlet property="SquareStackView" destination="FFl-sQ-Eqk" id="gb4-2O-158"/>
-                        <outlet property="TopButtonLeft" destination="mvT-LZ-ZRi" id="V01-n3-ssw"/>
-                        <outlet property="TopButtonRight" destination="qaT-xy-MoK" id="AVX-Yr-3hY"/>
-                        <outlet property="TopStackView" destination="YZP-Li-i9d" id="HLc-Gf-Ee1"/>
+                        <outlet property="PhotoView" destination="twm-2r-dd3" id="B47-rh-6vY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -448,6 +442,6 @@
         <image name="Bouton 4" width="40" height="40"/>
         <image name="Bouton Buttom" width="40" height="40"/>
         <image name="Bouton Up" width="40" height="40"/>
-        <image name="Shape" width="68" height="68"/>
+        <image name="Shape croised" width="754" height="714"/>
     </resources>
 </document>
