@@ -114,27 +114,45 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             
     }
     }
-   
+    
+    func barOfActivity () {
+        let imageToShare = PhotoView.createImage()
+        let activityViewController = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
     
     @IBAction func Swipe(_ sender: UISwipeGestureRecognizer) {
+       
         switch sender.direction {
         case [.left]:
             
+            if UIApplication.shared.statusBarOrientation.isLandscape {
             UIView.animate(withDuration: 0.3, animations: {
                self.PhotoView.transform = CGAffineTransform(translationX: -self.screenWidth, y: 0)
           }, completion: nil)
-            
-            
-            
-            print("1")
-        case [.up]:
+            barOfActivity()
             UIView.animate(withDuration: 0.3, animations: {
+                    self.PhotoView.transform = CGAffineTransform(translationX: +self.screenWidth, y: 0)
+                }, completion: nil)
+                print("1")}
+        case [.up]:
+            if UIApplication.shared.statusBarOrientation.isPortrait {
+                UIView.animate(withDuration: 0.3, animations: {
                 self.PhotoView.transform = CGAffineTransform(translationX: 0, y: -self.screenHeight)
             }, completion: nil)
-            print("3")
+                barOfActivity()
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.PhotoView.transform = CGAffineTransform(translationX: 0, y: +self.screenHeight)
+                }, completion: nil)
+                print("3")
+            }
         default:        break
         }
     }
+   
    
     
     override func didReceiveMemoryWarning() {
