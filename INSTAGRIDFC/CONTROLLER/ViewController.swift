@@ -12,6 +12,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     
+    @IBOutlet weak var ButtonFour: UIButton!
+    
+    @IBOutlet weak var ButtonUp: UIButton!
+    
+    
+    @IBOutlet weak var ButtonBottom: UIButton!
     
     @IBOutlet weak var PhotoView: PhotoView!
     var ButtonSelect: UIButton!
@@ -101,7 +107,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         switch (sender.tag) {
         case 1:
          PhotoView.changeLayout(topLeftHidden: false, bottomLeftHidden: false)
-        
+   //      ButtonFour.backgroundImage(for: <#T##UIControl.State#>)
         case 2:
             PhotoView.changeLayout(topLeftHidden: true, bottomLeftHidden: false)
             
@@ -122,6 +128,20 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         
         self.present(activityViewController, animated: true, completion: nil)
         
+       activityViewController.completionWithItemsHandler = {(nil, completed, _, error) in
+         if completed {
+            let alertController = UIAlertController(title: "Validation", message: "Vous avez sauvegardé l'image", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(action)
+            
+         } else {
+           let alertController = UIAlertController(title: "Annulation", message: "Vous avez annulé l'envoi", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default)
+           alertController.addAction(action)
+        }
+        
+        
+    }
     }
     
     @IBAction func Swipe(_ sender: UISwipeGestureRecognizer) {
@@ -130,22 +150,26 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         case [.left]:
             
             if UIApplication.shared.statusBarOrientation.isLandscape {
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 2, animations: {
                self.PhotoView.transform = CGAffineTransform(translationX: -self.screenWidth, y: 0)
           }, completion: nil)
             barOfActivity()
-            UIView.animate(withDuration: 0.3, animations: {
-                    self.PhotoView.transform = CGAffineTransform(translationX: +self.screenWidth, y: 0)
+            PhotoView.setup()
+                
+                UIView.animate(withDuration: 2, animations: {
+                    self.PhotoView.transform = CGAffineTransform(translationX: 20, y: 0)
                 }, completion: nil)
                 print("1")}
         case [.up]:
             if UIApplication.shared.statusBarOrientation.isPortrait {
-                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 2, animations: {
                 self.PhotoView.transform = CGAffineTransform(translationX: 0, y: -self.screenHeight)
             }, completion: nil)
                 barOfActivity()
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.PhotoView.transform = CGAffineTransform(translationX: 0, y: +self.screenHeight)
+                PhotoView.setup()
+                
+                UIView.animate(withDuration: 2, animations: {
+                    self.PhotoView.transform = CGAffineTransform(translationX: 0, y: 10)
                 }, completion: nil)
                 print("3")
             }

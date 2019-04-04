@@ -18,8 +18,18 @@ class PhotoView: UIView {
     func changeLayout(topLeftHidden: Bool , bottomLeftHidden: Bool) {
        TopButtonLeft.isHidden = topLeftHidden
        BottomButtonLeft.isHidden = bottomLeftHidden
-        
     }
+    
+    func setup() {
+        let image: UIImage = UIImage(named: "Combined Shape")!
+        
+        
+    TopButtonLeft.setImage(image, for: .normal)
+    TopButtonRight.setImage(image, for: .normal)
+    BottomButtonLeft.setImage(image, for: .normal)
+    BottomButtonRight.setImage(image, for: .normal)
+        
+        }
     
     
     
