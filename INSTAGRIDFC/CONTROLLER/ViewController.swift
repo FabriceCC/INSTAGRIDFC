@@ -150,25 +150,25 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         case [.left]:
             
             if UIApplication.shared.statusBarOrientation.isLandscape {
-            UIView.animate(withDuration: 2, animations: {
+            UIView.animate(withDuration: 0.4, animations: {
                self.PhotoView.transform = CGAffineTransform(translationX: -self.screenWidth, y: 0)
           }, completion: nil)
             barOfActivity()
             PhotoView.setup()
                 
-                UIView.animate(withDuration: 2, animations: {
+                UIView.animate(withDuration: 0.4, animations: {
                     self.PhotoView.transform = CGAffineTransform(translationX: 20, y: 0)
                 }, completion: nil)
                 print("1")}
         case [.up]:
             if UIApplication.shared.statusBarOrientation.isPortrait {
-                UIView.animate(withDuration: 2, animations: {
+                UIView.animate(withDuration: 0.4, animations: {
                 self.PhotoView.transform = CGAffineTransform(translationX: 0, y: -self.screenHeight)
             }, completion: nil)
                 barOfActivity()
                 PhotoView.setup()
                 
-                UIView.animate(withDuration: 2, animations: {
+                UIView.animate(withDuration: 0.4, animations: {
                     self.PhotoView.transform = CGAffineTransform(translationX: 0, y: 10)
                 }, completion: nil)
                 print("3")

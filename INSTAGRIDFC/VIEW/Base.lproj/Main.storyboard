@@ -35,7 +35,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YZP-Li-i9d" userLabel="TopStack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="152.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvT-LZ-ZRi" userLabel="TopButtonLeft">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvT-LZ-ZRi" userLabel="TopButtonLeft">
                                                         <rect key="frame" x="0.0" y="0.0" width="152.5" height="152.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Combined Shape"/>
@@ -43,7 +43,7 @@
                                                             <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YbP-vV-ZZS"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaT-xy-MoK" userLabel="TopButtonRight">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaT-xy-MoK" userLabel="TopButtonRight">
                                                         <rect key="frame" x="162.5" y="0.0" width="152.5" height="152.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Combined Shape"/>
@@ -443,6 +443,6 @@
         <image name="Bouton 4" width="40" height="40"/>
         <image name="Bouton Buttom" width="40" height="40"/>
         <image name="Bouton Up" width="40" height="40"/>
-        <image name="Combined Shape" width="20" height="20"/>
+        <image name="Combined Shape" width="48" height="48"/>
     </resources>
 </document>
