@@ -19,6 +19,8 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var ButtonBottom: UIButton!
     
+    
+    
     @IBOutlet weak var PhotoView: PhotoView!
     var ButtonSelect: UIButton!
     //var selection: UIImageAsset! = [Selected]
@@ -30,6 +32,9 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ButtonFour.imageView?.isHidden = false
+        ButtonUp.imageView?.isHidden = true
+        ButtonBottom.imageView?.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -47,6 +52,7 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         }
         
        ButtonSelect.setImage(photo, for: .normal)
+        ButtonSelect.imageView?.contentMode = .scaleAspectFill
         dismiss(animated:true, completion: nil)
     }
     
@@ -107,19 +113,39 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         switch (sender.tag) {
         case 1:
          PhotoView.changeLayout(topLeftHidden: false, bottomLeftHidden: false)
-   //      ButtonFour.backgroundImage(for: <#T##UIControl.State#>)
+            hideButtons(button: sender)
         case 2:
             PhotoView.changeLayout(topLeftHidden: true, bottomLeftHidden: false)
-            
+            hideButtons(button: sender)
          
         case 3:
             PhotoView.changeLayout(topLeftHidden: false, bottomLeftHidden: true)
-            
+            hideButtons(button: sender)
            
         default: print ("Error")
             
     }
     }
+    
+    func hideButtons(button :UIButton){
+        switch button.tag {
+        case 1:
+            self.ButtonFour.imageView?.isHidden = false
+            self.ButtonUp.imageView?.isHidden = true
+            self.ButtonBottom.imageView?.isHidden = true
+        case 2:
+            self.ButtonFour.imageView?.isHidden = true
+            self.ButtonUp.imageView?.isHidden = false
+            self.ButtonBottom.imageView?.isHidden = true
+        case 3:
+            self.ButtonFour.imageView?.isHidden = true
+            self.ButtonUp.imageView?.isHidden = true
+            self.ButtonBottom.imageView?.isHidden = false
+        default:
+            print ("Error")
+        }
+    }
+    
     
     func barOfActivity () {
         let imageToShare = PhotoView.createImage()
@@ -133,15 +159,24 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
             let alertController = UIAlertController(title: "Validation", message: "Vous avez sauvegardé l'image", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default)
             alertController.addAction(action)
-            
+            self.PhotoView.setup()
          } else {
            let alertController = UIAlertController(title: "Annulation", message: "Vous avez annulé l'envoi", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default)
            alertController.addAction(action)
+            
+            
         }
-        
-        
-    }
+        if UIApplication.shared.statusBarOrientation.isLandscape{
+            UIView.animate(withDuration: 4, animations: {
+                self.PhotoView.transform = CGAffineTransform(translationX: 20, y: 0)
+            }, completion: nil)
+        }
+        if UIApplication.shared.statusBarOrientation.isPortrait{
+            UIView.animate(withDuration: 4, animations: {
+                self.PhotoView.transform = CGAffineTransform(translationX: 0, y: 10)
+            }, completion: nil)
+        }    }
     }
     
     @IBAction func Swipe(_ sender: UISwipeGestureRecognizer) {
@@ -150,28 +185,22 @@ UINavigationControllerDelegate, UIGestureRecognizerDelegate {
         case [.left]:
             
             if UIApplication.shared.statusBarOrientation.isLandscape {
-            UIView.animate(withDuration: 0.4, animations: {
-               self.PhotoView.transform = CGAffineTransform(translationX: -self.screenWidth, y: 0)
+            UIView.animate(withDuration: 4, animations: {
+               self.PhotoView.transform = CGAffineTransform(translationX: -self.screenWidth + 50, y: 0)
           }, completion: nil)
             barOfActivity()
-            PhotoView.setup()
+           
                 
-                UIView.animate(withDuration: 0.4, animations: {
-                    self.PhotoView.transform = CGAffineTransform(translationX: 20, y: 0)
-                }, completion: nil)
-                print("1")}
+            }
         case [.up]:
             if UIApplication.shared.statusBarOrientation.isPortrait {
-                UIView.animate(withDuration: 0.4, animations: {
+                UIView.animate(withDuration: 4, animations: {
                 self.PhotoView.transform = CGAffineTransform(translationX: 0, y: -self.screenHeight)
             }, completion: nil)
                 barOfActivity()
-                PhotoView.setup()
                 
-                UIView.animate(withDuration: 0.4, animations: {
-                    self.PhotoView.transform = CGAffineTransform(translationX: 0, y: 10)
-                }, completion: nil)
-                print("3")
+                
+                
             }
         default:        break
         }
