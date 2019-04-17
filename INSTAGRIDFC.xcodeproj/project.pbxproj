@@ -69,6 +69,7 @@
 				2D2BBC5D21E1EFF7005933A0 /* ThirstySoftRegular.otf */,
 				2D2BBC5F21E1F001005933A0 /* Delm-Medium.otf */,
 				2D2BBC5421E1EE7A005933A0 /* Info.plist */,
+				2D2BBC4821E1EE79005933A0 /* AppDelegate.swift */,
 			);
 			path = INSTAGRIDFC;
 			sourceTree = "<group>";
@@ -95,7 +96,6 @@
 		2D2BBC5C21E1EE9E005933A0 /* MODEL */ = {
 			isa = PBXGroup;
 			children = (
-				2D2BBC4821E1EE79005933A0 /* AppDelegate.swift */,
 			);
 			path = MODEL;
 			sourceTree = "<group>";
